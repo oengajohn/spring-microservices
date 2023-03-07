@@ -1,0 +1,31 @@
+spring:
+  datasource:
+    username: root
+    url: jdbc:mysql://localhost:3307/springmicroservices
+    password: Admin@123
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    properties:
+      hibernate:
+        format_sql: true
+    show-sql: true
+  application:
+    name: inventory-service
+
+server:
+  port: 8082
+eureka:
+  client:
+    enabled: true
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+management:
+  zipkin:
+    tracing:
+      endpoint:  http://localhost:9411/api/v2/spans
+  tracing:
+    sampling:
+      probability: 1.0
