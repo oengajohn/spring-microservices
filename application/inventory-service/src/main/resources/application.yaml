@@ -2,7 +2,7 @@ spring:
   datasource:
     username: root
     url: jdbc:mysql://localhost:3307/springmicroservices
-    password: Admin@123
+    password: Ur@$2022
   jpa:
     hibernate:
       ddl-auto: create-drop
